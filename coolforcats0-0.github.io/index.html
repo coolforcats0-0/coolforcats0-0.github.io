@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>5 CoolCat</title>
+<style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background: #f7f7f7;
+  }
+  .stage {
+    position: relative;
+    height: 100vh;
+  }
+  .item {
+    position: absolute;
+  }
+  .item img {
+    display: block;
+    max-width: 240px;
+    height: auto;
+    border-radius: 6px;
+  }
+</style>
+<style>
+.snake span {
+  position: absolute;
+  white-space: pre;
+  offset-path: path("M 223 284 C 1084 -124 855 672 1253 844 S 2083 643 1690 -22");
+  offset-anchor: 50% 50%;
+  offset-rotate: auto;
+  animation: slither 6s linear infinite;
+}
+
+@keyframes slither {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+</style>
+<style>
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+ .animate-me:hover {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+
+</style>
+<style>
+@keyframes wobbletrain {
+  0% {
+    transform: translate(0) scale(2);
+  }
+  20% {
+    transform: translate(-4px, 4px) scale(2);
+  }
+  40% {
+    transform: translate(-4px, -4px) scale(2);
+  }
+  60% {
+    transform: translate(4px, 4px) scale(2);
+  }
+  80% {
+    transform: translate(4px, -4px) scale(2);
+  }
+  100% {
+    transform: translate(0) scale(2);
+  }
+}
+ .wobbletrain-me:hover {
+    animation: wobbletrain 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+
+</style>
+<style>
+  @keyframes spin {
+    0%   { transform: rotate(0deg) scale(3); }
+    50% { transform: rotate(180deg) scale(2.5)}
+    100% { transform: rotate(360deg) scale(3); }
+  }
+
+  /* only applies to image with class 'animate-me' */
+  .spin-me:hover {
+    animation: spin 2.5s linear infinite;
+  }
+</style>
+</style>
+</head>
+<body style="background-color: #cc647e; background-image: url(assets/dark-brick-wall.png);">
+
+    <div class="snake">
+      <span style="animation-delay: 0.0s"><img src="assets/!.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 0.2s"><img src="assets/s.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 0.4s"><img src="assets/n.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 0.6s"><img src="assets/e.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 0.8s"><img src="assets/t.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 1s"><img src="assets/t.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 1.2s"><img src="assets/i.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 1.4s"><img src="assets/k.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 1.6s"></span>
+      <span style="animation-delay: 1.8s"><img src="assets/e.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 2s"><img src="assets/m.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 2.2s"><img src="assets/o.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 2.4s"><img src="assets/c.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 2.6s"><img src="assets/l.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 2.8s"><img src="assets/e.png" style="transform: scale(0.5);"></span>
+      <span style="animation-delay: 3s"><img src="assets/w.png" style="transform: scale(0.5);"></span>
+    </div>
+
+  <div class="stage">
+    <div class="item" style="left: 40px; top: 40px;">
+        <img class="animate-me" src="assets/coolcatlogo.png" alt="1" style="transform: scale(1);">
+    </div>
+    </div>
+    <div class="item" style="left: 750px; top: 500px;">
+      <img class="animate-me" src="assets/trinkets.png" alt="2">
+    </div>
+    <div class="item" style="left: 1300px; top: 300px;">
+      <img class="spin-me" src="assets/coolcatradio.png" alt="3" style="transform: scale(3);">
+    </div>
+     <div class="item" style="left: 200px; top: 700px;">
+      <img class="wobbletrain-me" src="assets/cutetrain.gif" alt="4" style="transform: scale(2)"> 
+    </div>
+    <div class="item" style="left: 120px; top: 750px;">
+      <img src="assets/trainspotting.gif" alt="5" style="transform: scale(2);">
+    </div>
+    <div class="item" style="left: 50px; top: 300px;">
+      <img src="assets/mycoolwebsite.png" alt="6" style="transform: scale(1.5);">
+    </div>
+    <div class="item" style="left: 200px; top: 400px;">
+      <img class="animate-me" src="assets/coolscan.gif" alt="7" style="transform: scale(1);">
+    </div> 
+    
+    <div class="item" style="left: 40px; top:500px;">
+      <img class="animate-me" src="assets/robotprojects.gif" alt="7" style="transform: scale(1);">
+    </div>
+  </div>
+<br>s
+<br>
+<br>
+<br>
+</body>
+</html> 
